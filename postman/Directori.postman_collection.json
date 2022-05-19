@@ -1,0 +1,165 @@
+{
+	"info": {
+		"_postman_id": "a8fc3b1a-12a4-4c04-89e7-1b7e1c91eec2",
+		"name": "Directori",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Recuperar usuarios",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9870/api/empleados",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9870",
+					"path": [
+						"api",
+						"empleados"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Recuperar usuarios paginados",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9870/api/empleados?offset=2&limit=3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9870",
+					"path": [
+						"api",
+						"empleados"
+					],
+					"query": [
+						{
+							"key": "offset",
+							"value": "2"
+						},
+						{
+							"key": "limit",
+							"value": "3"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Filtrar usuarios por nombre",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9870/api/empleados?nombre=bill",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9870",
+					"path": [
+						"api",
+						"empleados"
+					],
+					"query": [
+						{
+							"key": "nombre",
+							"value": "bill"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Filtrar usuarios por nombre paginados",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9870/api/empleados?nombre=bill?offset=2&limit=3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9870",
+					"path": [
+						"api",
+						"empleados"
+					],
+					"query": [
+						{
+							"key": "nombre",
+							"value": "bill?offset=2"
+						},
+						{
+							"key": "limit",
+							"value": "3"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Filtrar usuarios por nombre paginados Copy",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Datos usuario",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9870/api/empleados/bilgat",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9870",
+					"path": [
+						"api",
+						"empleados",
+						"bilgat"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Datos usuario No encontrado",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9870/api/empleados/notexi",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9870",
+					"path": [
+						"api",
+						"empleados",
+						"notexi"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
