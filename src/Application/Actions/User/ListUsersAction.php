@@ -13,11 +13,18 @@ class ListUsersAction extends UserAction
     protected function action(): Response
     {
         $params = $this->request->getQueryParams();
-
         $users = $this->userRepository->findAll();
+
+        $result = [];
+        foreach ($users as $user){
+            $user->setphotoempty();
+            $result[] = $user;
+        }
+        print_r ($result);
+
 
         $this->logger->info("Users list was viewed.");
 
-        return $this->respondWithData($users);
+        return $this->respondWithData($result );
     }
 }

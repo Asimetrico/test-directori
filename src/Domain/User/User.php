@@ -77,6 +77,7 @@ class User implements JsonSerializable
      * @param string    $email
      * @param string $centro
      * @param string $telf
+     * @param string $foto
      */
     public function __construct(?string $id, string $apellido1, string $nombre, string $apellido2,
                                 string $email, string $departamento,  string $categoria,
@@ -130,6 +131,15 @@ class User implements JsonSerializable
     {
         return $this->apellido2;
     }
+
+    /**
+     * @return string
+     */
+    public function setphotoempty(): void
+    {
+        $this->foto = '';
+    }
+
 
     /**
      * @return array
