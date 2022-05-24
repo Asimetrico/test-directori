@@ -1,8 +1,9 @@
-
+{
 	"info": {
-		"_postman_id": "a8fc3b1a-12a4-4c04-89e7-1b7e1c91eec2",
+		"_postman_id": "1fa4767b-a8ad-4724-a384-9cf612f741c1",
 		"name": "Directori",
-		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "13870980"
 	},
 	"item": [
 		{
@@ -112,10 +113,92 @@
 			"response": []
 		},
 		{
+			"name": "Filtrar usuarios por nombre paginados",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9870/api/empleados?telefono=123?offset=2&limit=3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9870",
+					"path": [
+						"api",
+						"empleados"
+					],
+					"query": [
+						{
+							"key": "telefono",
+							"value": "123?offset=2"
+						},
+						{
+							"key": "limit",
+							"value": "3"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
 			"name": "Filtrar usuarios por nombre paginados Copy",
 			"request": {
 				"method": "GET",
-				"header": []
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9870/api/empleados?email=joapra@dexeus.com?offset=2&limit=3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9870",
+					"path": [
+						"api",
+						"empleados"
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "joapra@dexeus.com?offset=2"
+						},
+						{
+							"key": "limit",
+							"value": "3"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Filtrar usuarios por nombre paginados Copy 2",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9870/api/empleados?usuario=joapra?offset=2&limit=3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9870",
+					"path": [
+						"api",
+						"empleados"
+					],
+					"query": [
+						{
+							"key": "usuario",
+							"value": "joapra?offset=2"
+						},
+						{
+							"key": "limit",
+							"value": "3"
+						}
+					]
+				}
 			},
 			"response": []
 		},
